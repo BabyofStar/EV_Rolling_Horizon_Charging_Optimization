@@ -1,0 +1,62 @@
+status: frozen
+scope: prespecified_E2_E3_grid
+frozen_at_utc: '2026-11-12T12:40:51.531476+00:00'
+e1_config_sha256: 7cc860d7eb6e76e19e7eff16a47116589e462d571c78d52121f2d4ba0c0c3b7b
+e1_directory: results/logs/stage4_main_test_20261112T102930606571Z
+shared_reference:
+  alpha: 0.5
+  capacity_kw: 50.0
+policy: Grid values fixed by the project plan; single-factor changes; no test-based
+  choice of a best parameter; failed runs retained.
+scenarios:
+- id: E2_alpha020
+  experiment: E2
+  alpha: 0.2
+  capacity_kw: 50.0
+  base_hours: 24.0
+  static_time_limit: 120.0
+- id: E2_alpha080
+  experiment: E2
+  alpha: 0.8
+  capacity_kw: 50.0
+  base_hours: 24.0
+  static_time_limit: 120.0
+- id: E3_cap0375
+  experiment: E3
+  alpha: 0.5
+  capacity_kw: 37.5
+  base_hours: 24.0
+  static_time_limit: 120.0
+- id: E3_cap0625
+  experiment: E3
+  alpha: 0.5
+  capacity_kw: 62.5
+  base_hours: 24.0
+  static_time_limit: 120.0
+source_and_input_sha256:
+  experiments/run_test_evaluation.py: 0f55c322fae5e58469438145b5bbaa491a9c0991737215265edf5bacedee167d
+  requirements.txt: 91ced6f716e673ba9ea8d2808f7d2d359e84c9f5c08aa9f085276b88baecd1b6
+  configs/final.yaml: 7cc860d7eb6e76e19e7eff16a47116589e462d571c78d52121f2d4ba0c0c3b7b
+  src/acnsim_adapter.py: 095054596aecd0f2a8f1c1f3618b7150fdad66062818c0ac439946dbcf105166
+  src/baselines.py: f1429c4374106a0de50e793a18af6cabe28ccb33341c8e81430260a0d976c776
+  src/data_preprocessing.py: b03aa5f6ce5bac2d13a9e80aa5626b432ce2e58d582b208506720e4b6727ae4d
+  src/metrics.py: 170e6cec5417c20d5fb224230e582accfa275a1c80d4dfe68e63e5181e890b10
+  src/optimization_model.py: ad1bd89d48c1fe5f248763769d196a92da5c6db9a5e322c983e3507e18a7a31a
+  src/rolling_horizon.py: 50fe6a14d65247fb63daaca400e0416d5107da6d720d5f1a7a5e4da5e5adcf84
+  src/simulator.py: 9358bf69fa5f688bc804b392270e8dd903fdf5ebec9880b095bdb9edc8d7ddea
+  src/tariff.py: f7ebf3526ea0a88ef8c7f0c9855b41c434a8d9d1d81d7bed32f483402ddd9c08
+  configs/station.yaml: 688b90bdb00afd49c73777ad3c816b3b8841274a6e4dc0757728d585749202b9
+  configs/splits.yaml: cbdfe0600695cf9ef2d0d2a063e2da056b03378ad4a4dc666962e7b813e2c34e
+  configs/tariff.yaml: 1d5a6b3c26cc64d89681017412f71447657d3d652d8c8e93655a425fbbc5f6d4
+  configs/normalization.yaml: 104577ab3e48921c50885cd45a1a441190b105f48026271ab47547e9d2c7bb50
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/sessions_with_split.csv: 31e64878608779505051adc875da47defa90f9ddb785b45033ba33f13822db3c
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/environment_events.csv: c7d7ab97c884c844713aafe0b85df1daca24ca31f3f7df7700a129bf43df5ec4
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/input_release_events.csv: a7060c9771b30abd8ab772af69a9b06e26353dd31a1d91f1cc1f68a04fe384db
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/user_updates.csv: 50630f07c90295509dcceaa38c7a3c6d5b895616d9647f72928e1fd06a2a0c8c
+  data/external/tariff.csv: 766c85b4cfb595e09bc14f266aaf07c9791466449713a43519dbb0cca6116b6f
+  report/stage3_acceptance.md: 9a15bcd90ce19a4732e99c69453aa5fc83ba013cfe6acec093c8b0c0f501e980
+  report/stage3_artifact_index.csv: ffc0a0d13db243c2d302111b6ab4005a450a8b4f238e892c890423419113aa85
+  experiments/run_sensitivity.py: 44de98f5ad7fae3cfb69b521c6b9b2f8afb7e30585193b45c7da2c50a4244130
+  experiments/run_sensitivity_batch.py: a3e4ffde5fa07e51efc6eafcb0f1203d4038a2785ee27c7b2debe9a904c14444
+  results/logs/stage4_main_test_20261112T102930606571Z/verification.json: dfe2f57572a60254326cbd25d020f33e27efede87908b91b43ad19bc2ea052f7
+  results/logs/stage4_main_test_20261112T102930606571Z/comparison.csv: 01a6e2f15540a5f9d57d55f5a9179b70a8d60be036a7a1c26b4b580f3589e293

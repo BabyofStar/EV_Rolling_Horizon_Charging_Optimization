@@ -1,0 +1,56 @@
+status: frozen
+scope: E1_main_test
+frozen_at_utc: '2026-11-12T10:29:30.595558+00:00'
+parameter_policy: retain_plan_defaults_after_validation
+split: test
+expected_sessions:
+  main_at_arrival: 39
+  supplement_after_submission: 468
+parameters:
+  alpha: 0.5
+  capacity_kw: 50.0
+  base_hours: 24.0
+  static_time_limit: 120.0
+  control_interval_minutes: 15
+  online_two_stage_time_limit_seconds: 30
+  epsilon_U_kwh: 1.0e-05
+  service_epsilon_kwh: 0.01
+  C_ref: 2.8800000000000003
+  P_ref: 6.656
+methods:
+- Uncontrolled
+- TOU_Greedy
+- Static_LP
+- RH_LP
+static_identity: offline_full_information_oracle
+network_scope: aggregate_continuous_experimental_capacity
+original_branch_constraints_enforced: false
+test_based_parameter_selection: false
+validation_evidence:
+  directory: results/logs/stage4_validation_20261112T093611799901Z
+  verification_sha256: ca7e3ff91290b117c4ed09ccb9c941b0997a379f296a4250f6cd6cba24514aaa
+  comparison_sha256: 31f6304c44408cd9c3051d52cca3e59b993b80ccc3764d47a8fa0888792b0598
+  check_count: 48
+source_and_input_sha256:
+  experiments/run_evaluation.py: a59b46712f5fdd6a93abf758512aaa0b9badf7a06008b10f9679c897897e6bd6
+  requirements.txt: 91ced6f716e673ba9ea8d2808f7d2d359e84c9f5c08aa9f085276b88baecd1b6
+  src/acnsim_adapter.py: 095054596aecd0f2a8f1c1f3618b7150fdad66062818c0ac439946dbcf105166
+  src/baselines.py: f1429c4374106a0de50e793a18af6cabe28ccb33341c8e81430260a0d976c776
+  src/data_preprocessing.py: b03aa5f6ce5bac2d13a9e80aa5626b432ce2e58d582b208506720e4b6727ae4d
+  src/metrics.py: 170e6cec5417c20d5fb224230e582accfa275a1c80d4dfe68e63e5181e890b10
+  src/optimization_model.py: ad1bd89d48c1fe5f248763769d196a92da5c6db9a5e322c983e3507e18a7a31a
+  src/rolling_horizon.py: 50fe6a14d65247fb63daaca400e0416d5107da6d720d5f1a7a5e4da5e5adcf84
+  src/simulator.py: 9358bf69fa5f688bc804b392270e8dd903fdf5ebec9880b095bdb9edc8d7ddea
+  src/tariff.py: f7ebf3526ea0a88ef8c7f0c9855b41c434a8d9d1d81d7bed32f483402ddd9c08
+  configs/station.yaml: 688b90bdb00afd49c73777ad3c816b3b8841274a6e4dc0757728d585749202b9
+  configs/splits.yaml: cbdfe0600695cf9ef2d0d2a063e2da056b03378ad4a4dc666962e7b813e2c34e
+  configs/tariff.yaml: 1d5a6b3c26cc64d89681017412f71447657d3d652d8c8e93655a425fbbc5f6d4
+  configs/normalization.yaml: 104577ab3e48921c50885cd45a1a441190b105f48026271ab47547e9d2c7bb50
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/sessions_with_split.csv: 31e64878608779505051adc875da47defa90f9ddb785b45033ba33f13822db3c
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/environment_events.csv: c7d7ab97c884c844713aafe0b85df1daca24ca31f3f7df7700a129bf43df5ec4
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/input_release_events.csv: a7060c9771b30abd8ab772af69a9b06e26353dd31a1d91f1cc1f68a04fe384db
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/user_updates.csv: 50630f07c90295509dcceaa38c7a3c6d5b895616d9647f72928e1fd06a2a0c8c
+  data/external/tariff.csv: 766c85b4cfb595e09bc14f266aaf07c9791466449713a43519dbb0cca6116b6f
+  report/stage3_acceptance.md: 9a15bcd90ce19a4732e99c69453aa5fc83ba013cfe6acec093c8b0c0f501e980
+  report/stage3_artifact_index.csv: ffc0a0d13db243c2d302111b6ab4005a450a8b4f238e892c890423419113aa85
+  experiments/run_test_evaluation.py: 0f55c322fae5e58469438145b5bbaa491a9c0991737215265edf5bacedee167d

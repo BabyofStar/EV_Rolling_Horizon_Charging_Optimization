@@ -1,0 +1,176 @@
+status: frozen
+scope: E4_controlled_synthetic_information_errors
+frozen_at_utc: '2026-11-13T09:04:52.210174+00:00'
+e1_directory: results/logs/stage4_main_test_20261112T102930606571Z
+e1_config_sha256: 7cc860d7eb6e76e19e7eff16a47116589e462d571c78d52121f2d4ba0c0c3b7b
+methods:
+- Uncontrolled
+- TOU_Greedy
+- RH_LP
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+amplitudes:
+- 0.1
+- 0.2
+error_distribution: per-session fixed sign, values minus/plus amplitude
+pairing: same sign across amplitudes, updates and online methods
+evaluation_targets: fixed E1 targets; excess reported separately
+early_departure_policy: clip at arrival plus 1 ns; retain all sessions
+zero_reference: reuse E1; small-sample runner equivalence passed
+no_test_based_parameter_selection: true
+factor_manifest: results/logs/stage4_robustness_20261113T090451907487Z/factor_manifest.csv
+scenarios:
+- id: E4_early15
+  type: early_departure
+  amplitude: 0.0
+  seed: 0
+  advance_minutes: 15
+- id: E4_early30
+  type: early_departure
+  amplitude: 0.0
+  seed: 0
+  advance_minutes: 30
+- id: E4_req10_seed00
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 0
+  advance_minutes: 0
+- id: E4_req20_seed00
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 0
+  advance_minutes: 0
+- id: E4_req10_seed01
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 1
+  advance_minutes: 0
+- id: E4_req20_seed01
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 1
+  advance_minutes: 0
+- id: E4_req10_seed02
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 2
+  advance_minutes: 0
+- id: E4_req20_seed02
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 2
+  advance_minutes: 0
+- id: E4_req10_seed03
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 3
+  advance_minutes: 0
+- id: E4_req20_seed03
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 3
+  advance_minutes: 0
+- id: E4_req10_seed04
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 4
+  advance_minutes: 0
+- id: E4_req20_seed04
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 4
+  advance_minutes: 0
+- id: E4_req10_seed05
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 5
+  advance_minutes: 0
+- id: E4_req20_seed05
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 5
+  advance_minutes: 0
+- id: E4_req10_seed06
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 6
+  advance_minutes: 0
+- id: E4_req20_seed06
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 6
+  advance_minutes: 0
+- id: E4_req10_seed07
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 7
+  advance_minutes: 0
+- id: E4_req20_seed07
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 7
+  advance_minutes: 0
+- id: E4_req10_seed08
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 8
+  advance_minutes: 0
+- id: E4_req20_seed08
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 8
+  advance_minutes: 0
+- id: E4_req10_seed09
+  type: demand_estimation_error
+  amplitude: 0.1
+  seed: 9
+  advance_minutes: 0
+- id: E4_req20_seed09
+  type: demand_estimation_error
+  amplitude: 0.2
+  seed: 9
+  advance_minutes: 0
+source_and_input_sha256:
+  experiments/run_test_evaluation.py: 0f55c322fae5e58469438145b5bbaa491a9c0991737215265edf5bacedee167d
+  requirements.txt: 91ced6f716e673ba9ea8d2808f7d2d359e84c9f5c08aa9f085276b88baecd1b6
+  configs/final.yaml: 7cc860d7eb6e76e19e7eff16a47116589e462d571c78d52121f2d4ba0c0c3b7b
+  src/acnsim_adapter.py: 095054596aecd0f2a8f1c1f3618b7150fdad66062818c0ac439946dbcf105166
+  src/baselines.py: f1429c4374106a0de50e793a18af6cabe28ccb33341c8e81430260a0d976c776
+  src/data_preprocessing.py: b03aa5f6ce5bac2d13a9e80aa5626b432ce2e58d582b208506720e4b6727ae4d
+  src/metrics.py: 170e6cec5417c20d5fb224230e582accfa275a1c80d4dfe68e63e5181e890b10
+  src/optimization_model.py: ad1bd89d48c1fe5f248763769d196a92da5c6db9a5e322c983e3507e18a7a31a
+  src/rolling_horizon.py: 50fe6a14d65247fb63daaca400e0416d5107da6d720d5f1a7a5e4da5e5adcf84
+  src/simulator.py: 9358bf69fa5f688bc804b392270e8dd903fdf5ebec9880b095bdb9edc8d7ddea
+  src/tariff.py: f7ebf3526ea0a88ef8c7f0c9855b41c434a8d9d1d81d7bed32f483402ddd9c08
+  configs/station.yaml: 688b90bdb00afd49c73777ad3c816b3b8841274a6e4dc0757728d585749202b9
+  configs/splits.yaml: cbdfe0600695cf9ef2d0d2a063e2da056b03378ad4a4dc666962e7b813e2c34e
+  configs/tariff.yaml: 1d5a6b3c26cc64d89681017412f71447657d3d652d8c8e93655a425fbbc5f6d4
+  configs/normalization.yaml: 104577ab3e48921c50885cd45a1a441190b105f48026271ab47547e9d2c7bb50
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/sessions_with_split.csv: 31e64878608779505051adc875da47defa90f9ddb785b45033ba33f13822db3c
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/environment_events.csv: c7d7ab97c884c844713aafe0b85df1daca24ca31f3f7df7700a129bf43df5ec4
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/input_release_events.csv: a7060c9771b30abd8ab772af69a9b06e26353dd31a1d91f1cc1f68a04fe384db
+  data/processed/caltech_12weeks_20261111T143402Z_9b087d/user_updates.csv: 50630f07c90295509dcceaa38c7a3c6d5b895616d9647f72928e1fd06a2a0c8c
+  data/external/tariff.csv: 766c85b4cfb595e09bc14f266aaf07c9791466449713a43519dbb0cca6116b6f
+  report/stage3_acceptance.md: 9a15bcd90ce19a4732e99c69453aa5fc83ba013cfe6acec093c8b0c0f501e980
+  report/stage3_artifact_index.csv: ffc0a0d13db243c2d302111b6ab4005a450a8b4f238e892c890423419113aa85
+  experiments/robustness_protocol.py: 387507fbc0464c045b48233284cbb70bdaf60d12f0eae00b2f7a3676e0fe61c4
+  experiments/run_robustness.py: dd5389c3f9adf885892bc2d96259411ee8385c8e0595d661aaf10d4f34eaba6a
+  experiments/check_robustness_zero.py: a22e28163db35d387a2cddac848a0d43c0cbc94556464fac9d63772ba69b19c4
+  results/logs/stage4_robustness_protocol_20261113T083943861871Z/verification.json: f598f01a96de467964fb90cdc03fe22e0f108a17e43e30c50e8f7b72a2187963
+  experiments/run_robustness_batch.py: 2679db5385c51d1b8f1e8e3d0d14c5fec8aa8954f144e48f01581776c6fcc69a
+  results/logs/stage4_robustness_20261113T090451907487Z/factor_manifest.csv: e3c9701dcdc783bad4d0844a7e7a333616815a6fa459091b578c6a6451cce9a8
+  results/logs/stage4_robustness_zero_20261113T085102841093Z/smoke_config.yaml: d9f0e9f785a03c54646d19fe766919a10087d2b5d85a5e83b30cad751c06459c
+  results/logs/stage4_robustness_zero_20261113T085102841093Z/smoke_verification.json: de49c7825a89f978c83486a76574765b2a65b551b9bfde449dd6734e4a960779
+  results/logs/stage4_robustness_zero_20261113T085102841093Z/bypass/verification.json: 697461ab01946cff9421331b89d246045f0b1e95829a44b19928f0a49561b6c0
+  results/logs/stage4_robustness_zero_20261113T085102841093Z/zero/verification.json: ce75da671ff0bedd513e78530d4fc64f2e35f98b3f56d79c6dbcabff27577967
+  results/logs/stage4_main_test_20261112T102930606571Z/verification.json: dfe2f57572a60254326cbd25d020f33e27efede87908b91b43ad19bc2ea052f7
+  results/logs/stage4_main_test_20261112T102930606571Z/comparison.csv: 01a6e2f15540a5f9d57d55f5a9179b70a8d60be036a7a1c26b4b580f3589e293

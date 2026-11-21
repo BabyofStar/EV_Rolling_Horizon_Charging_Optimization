@@ -1,0 +1,24 @@
+site: caltech
+siteID: '0002'
+clusterID: 0039
+timezone: America/Los_Angeles
+network_model: aggregate_continuous
+station_capacity_kW: 50.0
+capacity_source: experimental_scenario_not_inferred_physical_capacity
+capacity_sensitivity_multipliers:
+- 0.75
+- 1.0
+- 1.25
+evse_mapping_file: data/external/observed_evse_mapping.csv
+evse_reference_file: data/external/acnsim_evse_reference.csv
+acnportal_version: 0.3.3
+reference_source_sha256: 6f110ca6d8cec9e74f5970beb52d17ba49b932fc69909f3042190a72c1f133fe
+evse_voltage_V: 208.0
+evse_max_current_A: 32.0
+evse_max_power_kW: 6.656
+power_factor_assumption: 1.0
+power_control: continuous_from_zero_to_device_limit
+energy_basis: grid_side
+charging_efficiency: 1.0
+control_interval_minutes: 15
+original_branch_constraints_enforced: false
